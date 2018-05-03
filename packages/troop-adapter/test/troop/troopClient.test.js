@@ -38,6 +38,23 @@ fetchMock
       ];
     }
 
+    if (ops.body.indexOf('student_course_enrollment') >= 0) {
+      return [
+        {
+          id: 'student_course_enrollment!current',
+          studentLevel: {
+            collapsed: true,
+            id: 'student_level!3ecc6a0b-c18b-4112-a7cb-8da2cf061ae6'
+          }
+        },
+        {
+          id: 'student_level!3ecc6a0b-c18b-4112-a7cb-8da2cf061ae6',
+          collapsed: false,
+          levelCode: 8
+        }
+      ];
+    }
+
     return {};
   })
   .catch({
@@ -83,5 +100,14 @@ describe('verify troop client', () => {
       troopContext: { values: { countrycode: { value: 'ZH' }, languagecode: { value: 'en' } } }
     });
     expect(response.length).to.equal(2);
+  });
+
+  it('verify nested query', async () => {
+    const response = await troopClient.query('/services/api/proxy/queryproxy', 'student_course_enrollment!current.studentLevel', {
+      troopContext: { values: { countrycode: { value: 'ZH' }, languagecode: { value: 'en' } } }
+    });
+    const enrollment = response[0];
+    expect(typeof enrollment.studentLevel).to.eql('object');
+    expect(enrollment.studentLevel.levelCode).to.eql(8);
   });
 });
