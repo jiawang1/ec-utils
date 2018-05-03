@@ -10,7 +10,8 @@
     "update": "lerna updated --json",
     "lint": "eslint ./packages/** --ignore-path .gitignore",
     "dist:troop-adapter": "node ./tools/build.js -- troop-adapter",
-    "dist:apollo-link": "node ./tools/build.js -- apollo-link-async"
+    "dist:apollo-link": "node ./tools/build.js -- apollo-link-async",
+    "publish:troop-adapter":"./node_modules/lerna/bin/lerna.js publish --force-publish=@shanghai/troop-adapter   --cd-version prerelease --yes"
   },
   "repository": {
     "type": "git",
