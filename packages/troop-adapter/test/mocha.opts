@@ -1,0 +1,4 @@
+--require test/mocha.env.js
+--compilers js:babel-register
+
+

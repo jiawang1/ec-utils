@@ -1,0 +1,371 @@
+{
+	"kind": "Document",
+	"definitions": [{
+		"kind": "OperationDefinition",
+		"operation": "query",
+		"name": {
+			"kind": "Name",
+			"value": "queryEnrollment"
+		},
+		"variableDefinitions": [{
+			"kind": "VariableDefinition",
+			"variable": {
+				"kind": "Variable",
+				"name": {
+					"kind": "Name",
+					"value": "id"
+				}
+			},
+			"type": {
+				"kind": "NonNullType",
+				"type": {
+					"kind": "NamedType",
+					"name": {
+						"kind": "Name",
+						"value": "String"
+					}
+				}
+			}
+		}],
+		"directives": [],
+		"selectionSet": {
+			"kind": "SelectionSet",
+			"selections": [{
+				"kind": "Field",
+				"name": {
+					"kind": "Name",
+					"value": "student_course_enrollment"
+				},
+				"arguments": [{
+					"kind": "Argument",
+					"name": {
+						"kind": "Name",
+						"value": "id"
+					},
+					"value": {
+						"kind": "Variable",
+						"name": {
+							"kind": "Name",
+							"value": "id"
+						}
+					}
+				}],
+				"directives": [],
+				"selectionSet": {
+					"kind": "SelectionSet",
+					"selections": [{
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "id"
+						},
+						"arguments": [],
+						"directives": []
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentCourseId"
+						},
+						"arguments": [],
+						"directives": []
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentLevelId"
+						},
+						"arguments": [],
+						"directives": []
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentUnitId"
+						},
+						"arguments": [],
+						"directives": []
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentLessonId"
+						},
+						"arguments": [],
+						"directives": []
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentLevel"
+						},
+						"arguments": [],
+						"directives": [{
+							"kind": "Directive",
+							"name": {
+								"kind": "Name",
+								"value": "troop"
+							},
+							"arguments": [{
+								"kind": "Argument",
+								"name": {
+									"kind": "Name",
+									"value": "type"
+								},
+								"value": {
+									"kind": "StringValue",
+									"value": "student_level",
+									"block": false
+								}
+							}]
+						}],
+						"selectionSet": {
+							"kind": "SelectionSet",
+							"selections": [{
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "id"
+								},
+								"arguments": [],
+								"directives": []
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "levelName"
+								},
+								"arguments": [],
+								"directives": []
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "templateLevelId"
+								},
+								"arguments": [],
+								"directives": []
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "progress"
+								},
+								"arguments": [],
+								"directives": [],
+								"selectionSet": {
+									"kind": "SelectionSet",
+									"selections": [{
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "score"
+										},
+										"arguments": [],
+										"directives": []
+									}, {
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "__typename"
+										}
+									}]
+								}
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "children"
+								},
+								"arguments": [],
+								"directives": [{
+									"kind": "Directive",
+									"name": {
+										"kind": "Name",
+										"value": "troop"
+									},
+									"arguments": [{
+										"kind": "Argument",
+										"name": {
+											"kind": "Name",
+											"value": "type"
+										},
+										"value": {
+											"kind": "StringValue",
+											"value": "student_unit",
+											"block": false
+										}
+									}]
+								}],
+								"selectionSet": {
+									"kind": "SelectionSet",
+									"selections": [{
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "unitName"
+										},
+										"arguments": [],
+										"directives": []
+									}, {
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "progress"
+										},
+										"arguments": [],
+										"directives": [],
+										"selectionSet": {
+											"kind": "SelectionSet",
+											"selections": [{
+												"kind": "Field",
+												"name": {
+													"kind": "Name",
+													"value": "score"
+												},
+												"arguments": [],
+												"directives": []
+											}, {
+												"kind": "Field",
+												"name": {
+													"kind": "Name",
+													"value": "__typename"
+												}
+											}]
+										}
+									}, {
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "__typename"
+										}
+									}]
+								}
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "__typename"
+								}
+							}]
+						}
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "studentCourse"
+						},
+						"arguments": [],
+						"directives": [{
+							"kind": "Directive",
+							"name": {
+								"kind": "Name",
+								"value": "troop"
+							},
+							"arguments": [{
+								"kind": "Argument",
+								"name": {
+									"kind": "Name",
+									"value": "type"
+								},
+								"value": {
+									"kind": "StringValue",
+									"value": "student_course",
+									"block": false
+								}
+							}]
+						}],
+						"selectionSet": {
+							"kind": "SelectionSet",
+							"selections": [{
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "id"
+								},
+								"arguments": [],
+								"directives": []
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "courseName"
+								},
+								"arguments": [],
+								"directives": []
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "courseLocation"
+								},
+								"arguments": [],
+								"directives": [{
+									"kind": "Directive",
+									"name": {
+										"kind": "Name",
+										"value": "troop"
+									},
+									"arguments": [{
+										"kind": "Argument",
+										"name": {
+											"kind": "Name",
+											"value": "type"
+										},
+										"value": {
+											"kind": "StringValue",
+											"value": "student_course_enrollment",
+											"block": false
+										}
+									}]
+								}],
+								"selectionSet": {
+									"kind": "SelectionSet",
+									"selections": [{
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "id"
+										},
+										"arguments": [],
+										"directives": []
+									}, {
+										"kind": "Field",
+										"name": {
+											"kind": "Name",
+											"value": "__typename"
+										}
+									}]
+								}
+							}, {
+								"kind": "Field",
+								"name": {
+									"kind": "Name",
+									"value": "__typename"
+								}
+							}]
+						}
+					}, {
+						"kind": "Field",
+						"name": {
+							"kind": "Name",
+							"value": "__typename"
+						}
+					}]
+				}
+			}]
+		}
+	}],
+	"loc": {
+		"start": 0,
+		"end": 652,
+		"source": {
+			"body": "\n  query queryEnrollment($id: String!) {\n    student_course_enrollment(id: $id) {\n      id\n      studentCourseId\n      studentLevelId\n      studentUnitId\n      studentLessonId\n      studentLevel @troop(type: \"student_level\") {\n        id\n        levelName\n        templateLevelId\n        progress {\n          score\n        }\n        children @troop(type: \"student_unit\") {\n          unitName\n          progress {\n            score\n          }\n        }\n      }\n      studentCourse @troop(type: \"student_course\") {\n        id\n        courseName\n        courseLocation @troop(type: \"student_course_enrollment\") {\n          id\n        }\n      }\n    }\n  }\n",
+			"name": "GraphQL request",
+			"locationOffset": {
+				"line": 1,
+				"column": 1
+			}
+		}
+	}
+}

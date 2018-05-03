@@ -1,0 +1,56 @@
+{
+  "name": "school",
+  "version": "0.1.0",
+  "description": "school project",
+  "scripts": {
+    "dist": "node ./tools/build.js",
+    "init": "npm install lerna && lerna bootstrap --hoist ",
+    "init:production": "npm install lerna && lerna bootstrap --hoist -- --production",
+    "hoist": "lerna bootstrap --hoist",
+    "update": "lerna updated --json",
+    "lint": "eslint ./packages/** --ignore-path .gitignore",
+    "dist:troop-adapter": "node ./tools/build.js -- troop-adapter",
+    "dist:apollo-link": "node ./tools/build.js -- apollo-link-async"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.englishtown.cn:7999/~jay.wang/school.git"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "chai": "^4.1.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "jsdom": "^11.1.0",
+    "lerna": "^2.11.0",
+    "mocha": "^5.0.1",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.26.0",
+    "estraverse": "^4.2.0",
+    "estraverse-fb": "^1.3.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-sizes": "^0.4.2",
+    "rollup-plugin-uglify": "^3.0.0",
+    "shelljs": "^0.8.1"
+  }
+}

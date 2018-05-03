@@ -1,0 +1,43 @@
+{
+  "name": "@shanghai/troop-adapter",
+  "version": "1.0.0-beta1",
+  "description": "support basic troop feature",
+  "main": "dist/troop-adapter.bundle.min.js",
+  "module": "es/troop-adapter.bundle.js",
+  "jsnext:main": "es/troop-adapter.bundle.js",
+  "scripts": {
+    "dist": "rollup -c --environment NODE_ENV:production",
+    "build": "rollup -c --environment NODE_ENV:development",
+    "test": "find ./test -name '*.test.js' | xargs ./node_modules/.bin/_mocha --recursive ",
+    "lint": "eslint ./src",
+    "st": "./node_modules/.bin/_mocha --"
+  },
+  "author": "school",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "mocha": "^5.0.1",
+    "fetch-mock": "^6.3.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+
+
+    "babel-runtime": "^6.26.0",
+
+    "invariant": "^2.2.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist/**",
+    "/es/**"
+  ]
+}

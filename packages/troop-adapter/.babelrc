@@ -1,0 +1,50 @@
+{
+  "presets": [
+    [
+      "env",
+      {  "browsers": [
+            "last 2 versions",
+            "ie >= 11"
+          ],
+        "modules": false
+      }
+    ],
+    "babel-preset-stage-2"
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ],
+    "external-helpers"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "transform-runtime",
+          {
+            "helpers": true,
+            "polyfill": false,
+            "regenerator": true,
+            "moduleName": "babel-runtime"
+          }
+        ],
+        "external-helpers"
+      ]
+    }
+  }
+}

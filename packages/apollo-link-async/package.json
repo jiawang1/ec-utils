@@ -1,0 +1,37 @@
+{
+  "name": "@shanghai/apollo-link-async",
+  "version": "1.0.0-beta1",
+  "description": "request to non-graphql server",
+  "main": "dist/apollo-link-async.bundle.min.js",
+  "module": "es/apollo-link-async.bundle.js",
+  "scripts": {
+    "dist": "rollup -c --environment NODE_ENV:production",
+    "test": "mocha --recursive",
+    "lint": "eslint ./src",
+    "build": "rollup -c --watch --environment NODE_ENV:development",
+    "precommit": "npm run lint && npm test"
+  },
+  "license": "NOLICENSE",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "mocha": "^5.0.1"
+
+  },
+  "dependencies": {
+    "apollo-link": "^1.2.1",
+    "babel-cli": "^6.26.0",
+
+    "graphql-anywhere": "^4.1.8",
+
+    "zen-observable": "^0.8.8"
+  },
+  "files": [
+    "/dist/**",
+    "/es/**"
+  ],
+  "publishConfig": {
+    "registry": "https://nexus3-cnshhq.englishtown.com/repository/npm-shanghai/"
+  }
+}
