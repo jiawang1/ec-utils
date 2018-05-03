@@ -1,6 +1,6 @@
 {
   "name": "@shanghai/troop-adapter",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta1.0",
   "description": "support basic troop feature",
   "main": "dist/troop-adapter.bundle.min.js",
   "module": "es/troop-adapter.bundle.js",
@@ -15,15 +15,12 @@
   "author": "school",
   "devDependencies": {
     "eslint": "^4.18.2",
-    "mocha": "^5.0.1",
-    "fetch-mock": "^6.3.0"
+    "fetch-mock": "^6.3.0",
+    "mocha": "^5.0.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-
-
     "babel-runtime": "^6.26.0",
-
     "invariant": "^2.2.2"
   },
   "peerDependencies": {
