@@ -11,7 +11,7 @@
     "lint": "eslint ./packages/** --ignore-path .gitignore",
     "dist:troop-adapter": "node ./tools/build.js -- troop-adapter",
     "dist:apollo-link": "node ./tools/build.js -- apollo-link-async",
-    "publish:troop-adapter":"npx lerna publish --force-publish=@shanghai/troop-adapter   --cd-version prerelease --yes"
+    "publish:troop-adapter":"npx lerna publish --force-publish=@shanghai/troop-adapter --skip-git --cd-version prerelease --yes"
   },
   "repository": {
     "type": "git",
