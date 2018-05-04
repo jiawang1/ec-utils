@@ -48,28 +48,29 @@ const runBuildParall = files => {
  * @param  boolean force: if true, will re-builde all projects, else, only build projects
  *  changed
  */
-const buildProjects = async () => {
+const buildProjects = () => {
   if (targetProjectName) {
     buildProject(targetProjectName, false);
   } else {
-    const { err, stdout } = await execPromise(commandDiff);
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log('following projects will be built : ');
-    const projects = JSON.parse(stdout).map(project => {
-      console.log(`project -- ${project.name}`);
+    execPromise(commandDiff)
+      .then(({ stdout }) => {
+        console.log('following projects will be built : ');
+        const projects = JSON.parse(stdout).map(project => {
+          console.log(`project -- ${project.name}`);
 
-      /**
-       *  some projects published to internal NPM repo, so the
-       * project name start with @, but the file system does not has
-       * this kind of folder, so here remove prefix
-       */
-      return project.name.replace(/^@[^/]+\//, '');
-    });
-    // if DLL changed, all projects should be re-build
-    runBuildParall(projects);
+          /**
+           *  some projects published to internal NPM repo, so the
+           * project name start with @, but the file system does not has
+           * this kind of folder, so here remove prefix
+           */
+          return project.name.replace(/^@[^/]+\//, '');
+        });
+        // if DLL changed, all projects should be re-build
+        runBuildParall(projects);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 };
 

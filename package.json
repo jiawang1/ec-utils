@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.englishtown.cn:7999/~jay.wang/school.git"
+    "url": "https://bitbucket.englishtown.cn/scm/smart/ec-ui-phoenix-utils.git"
   },
   "engines": {
     "node": ">= 8.0.0"
