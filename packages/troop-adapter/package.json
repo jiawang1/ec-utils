@@ -1,5 +1,5 @@
 {
-  "name": "@shanghai/troop-adapter",
+  "name": "troop-adapter",
   "version": "1.0.0-beta1.10",
   "description": "support basic troop feature",
   "main": "dist/troop-adapter.bundle.min.js",

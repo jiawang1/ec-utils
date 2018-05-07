@@ -14,7 +14,7 @@ const troop = {};
   troop[key] = info => info.directives && info.directives.troop && info.directives.troop[key];
 });
 
-const isQueryResult = Symbol('isQueryResult');
+const isQueryResult = Symbol.for('isQueryResult');
 
 const markAsQueryResult = obj => {
   if (utils.isObject(obj) && !obj[isQueryResult]) {
@@ -135,7 +135,9 @@ const createAsyncLink = (graphqlAdapter, resolvers = {}) => {
     const commandCache = readCacheByNormalizeKey(cache, 'command:command!*');
 
     if (commandCache && commandCache.results) {
-      const { results: { json } } = commandCache; // eslint-disable-line
+      const {
+        results: { json }
+      } = commandCache; // eslint-disable-line
       return json ? json[fieldName] : null;
     }
     console.log('No troop command found in cache'); // eslint-disable-line

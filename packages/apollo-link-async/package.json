@@ -1,5 +1,5 @@
 {
-  "name": "@shanghai/apollo-link-async",
+  "name": "apollo-link-async",
   "version": "1.0.0-beta1.0",
   "description": "request to non-graphql server",
   "main": "dist/apollo-link-async.bundle.min.js",
