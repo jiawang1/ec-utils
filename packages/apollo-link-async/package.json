@@ -24,11 +24,12 @@
     "graphql-anywhere": "^4.1.8",
     "zen-observable": "^0.8.8"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiawang1/ec-utils.git"
+  },
   "files": [
     "/dist/**",
     "/es/**"
-  ],
-  "publishConfig": {
-    "registry": "https://nexus3-cnshhq.englishtown.com/repository/npm-shanghai/"
-  }
+  ]
 }

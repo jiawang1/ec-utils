@@ -29,6 +29,10 @@
     "react-dom": "^16.3.0",
     "whatwg-fetch": "^2.0.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiawang1/ec-utils.git"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
