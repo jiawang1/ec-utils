@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.englishtown.cn/scm/smart/ec-ui-phoenix-utils.git"
+    "url": "https://github.com/jiawang1/ec-utils.git"
   },
   "engines": {
     "node": ">= 8.0.0"
