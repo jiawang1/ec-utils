@@ -1,7 +1,7 @@
 {
-  "name": "troop-adapter",
-  "version": "1.0.0-beta1.10",
-  "description": "support basic troop feature",
+  "name": "@ef/ec-ui-phx-troop-adapter",
+  "version": "1.0.0-beta1",
+  "description": "support basic troop query feature",
   "main": "dist/troop-adapter.bundle.min.js",
   "module": "es/troop-adapter.bundle.js",
   "jsnext:main": "es/troop-adapter.bundle.js",
@@ -12,7 +12,7 @@
     "lint": "eslint ./src",
     "st": "./node_modules/.bin/_mocha --"
   },
-  "author": "school",
+  "author": "ec-ui",
   "devDependencies": {
     "eslint": "^4.18.2",
     "fetch-mock": "^6.3.0",
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jiawang1/ec-utils.git"
+    "url": "https://bitbucket.englishtown.cn/scm/smart/ec-ui-phoenix-utils.git"
   },
-  "license": "MIT",
+  "license": "NOLICENSE",
   "publishConfig": {
     "access": "public"
   },

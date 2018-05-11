@@ -1,5 +1,5 @@
 {
-  "name": "@ef/ec-ui-phoenix-utils",
+  "name": "ec-ui-phoenix-utils",
   "version": "1.0.0",
   "description": "phoenix project",
   "scripts": {
