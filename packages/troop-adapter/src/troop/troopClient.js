@@ -51,15 +51,6 @@ const post = __fetch(method.post);
 const put = __fetch(method.put);
 const DELETE = __fetch(method.DELETE);
 
-const checkStatus = response => {
-  if (response.status >= 200 && response.status < 300) {
-    return response;
-  }
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
-};
-
 const getJson = async (url, option = {}) => {
   const _option = { ...option };
   if (_option.headers) {
@@ -71,7 +62,7 @@ const getJson = async (url, option = {}) => {
   }
   try {
     const response = await get(url, _option);
-    return checkStatus(response).json();
+    return utils.checkStatus(response).json();
   } catch (err) {
     logError(err);
     throw err;
@@ -96,7 +87,7 @@ const postJson = async (url, body, option = {}) => {
   }
   try {
     const response = await post(url, _option, typeof body === 'string' ? body : JSON.stringify(body));
-    return checkStatus(response).json();
+    return utils.checkStatus(response).json();
   } catch (err) {
     logError(err);
     throw err;

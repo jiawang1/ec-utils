@@ -102,7 +102,7 @@ export const troopQuery = async (url, jointQuery, options) => {
   };
   try {
     const response = await fetch(__url, fetchOptions);
-    const json = await response.json();
+    const json = await utils.checkStatus(response).json();
     const serialObject = serialize(json);
     return ids.map(id => serialObject[id]);
   } catch (err) {
@@ -123,7 +123,7 @@ export const troopCommand = async (url, content, options) => {
   };
   try {
     const response = await fetch(__url, fetchOptions);
-    return response.json();
+    return utils.checkStatus(response).json();
   } catch (err) {
     console.error(err); // eslint-disable-line
     throw err;
