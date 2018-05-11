@@ -1,6 +1,6 @@
 {
-  "name": "ec-ui-phoenix-utils",
-  "version": "0.1.0",
+  "name": "@ef/ec-ui-phoenix-utils",
+  "version": "1.0.0",
   "description": "phoenix project",
   "scripts": {
     "dist": "node ./tools/build.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jiawang1/ec-utils.git"
+    "url": "https://bitbucket.englishtown.cn/scm/smart/ec-ui-phoenix-utils.git"
   },
   "engines": {
     "node": ">= 8.0.0"
